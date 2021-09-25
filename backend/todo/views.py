@@ -8,3 +8,6 @@ from .models import Todo
 class TodoView(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
     queryset = Todo.objects.all()
+
+def index(request):
+    return render(request, 'index.html')
